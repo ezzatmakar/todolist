@@ -23,13 +23,13 @@ class ItemController extends Controller
 
         // return $completed;
 
-        $items = Item::orderBy('updated_at', 'DESC')->get();
+        $items = Item::orderBy('created_at', 'DESC')->get();
 
-        if(count($items) > 0){
+        // if(count($items) > 0){
             return $items;
-        }
+        // }
         
-        return "Not tasks found";
+        // return "Not tasks found";
     }
 
     /**
